@@ -6,7 +6,7 @@ U-Net decoder with swappable pretrained backbones, comparing **RGB-only** input 
 
 | Notebook | Input | Description |
 |:--|:--|:--|
-| `edge_unet_backbones_canny.ipynb` | RGB + Canny maps (4 levels) | Canny maps are fed as extra input channels and added to the output logits through a learned 1×1 skip, so the network starts from Canny and learns a correction. |
+| `edge_unet_backbones_canny.ipynb` | RGB + Canny maps (5 levels: σ = 0.25, 0.33, 0.5, 0.66, 0.75) | Canny maps are fed as extra input channels and added to the output logits through a learned 1×1 skip, so the network starts from Canny and learns a correction. |
 | `edge_unet_backbones_rgb.ipynb` | RGB only | Baseline with the same decoder, loss, schedule and metric. |
 
 Only the input differs between the two notebooks. In each one, only the encoder changes between runs.
